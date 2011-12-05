@@ -143,6 +143,8 @@ def getAddresses():
                 logger.pipe('echo "deb http://www.apache.org/dist/cassandra/debian 07x main"', 'sudo tee -a /etc/apt/sources.list.d/datastax.sources.list')
             elif options.deployment == "08x":
                 logger.pipe('echo "deb http://www.apache.org/dist/cassandra/debian 08x main"', 'sudo tee -a /etc/apt/sources.list.d/datastax.sources.list')
+            elif options.deployment == "10x":
+                logger.pipe('echo "deb http://www.apache.org/dist/cassandra/debian 10x main"', 'sudo tee -a /etc/apt/sources.list.d/datastax.sources.list')
             elif options.deployment == "brisk":
                 logger.pipe('echo "deb http://debian.datastax.com/maverick maverick main"', 'sudo tee -a /etc/apt/sources.list.d/datastax.sources.list')
                 conf.setConfig("AMI", "Type", "Brisk")
